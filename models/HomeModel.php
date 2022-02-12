@@ -1,5 +1,7 @@
 <?php
 
+namespace Models;
+
 class HomeModel extends Database {
 
     public function getHomeCategories() {

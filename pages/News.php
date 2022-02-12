@@ -1,5 +1,8 @@
 <?php
 
+namespace Pages;
+
+
 class News extends Page{
     
     public function index() {

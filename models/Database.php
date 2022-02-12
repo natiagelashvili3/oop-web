@@ -1,5 +1,9 @@
 <?php
 
+namespace Models;
+
+use PDO;
+
 class Database{    
     public $serverName = 'localhost';
     public $username = 'root';
