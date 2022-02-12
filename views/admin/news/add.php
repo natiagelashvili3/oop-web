@@ -1,1 +1,0 @@
-<p>this is a news add page</p>
