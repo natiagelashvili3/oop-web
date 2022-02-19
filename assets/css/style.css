@@ -1,15 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
-* {
-  font-family: 'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap");
+header .button-container button {
+  padding: 11px 25px;
+  border: 1px solid #FF5300;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #FF5300;
 }
 
-body {
+* {
   padding: 0;
   margin: 0;
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -18,10 +22,11 @@ body {
 }
 
 header {
-  background-color: #686de0;
+  padding: 45px 15px;
+  background: #f6f7f8;
 }
 
-header .content {
+header .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,28 +38,130 @@ header .content {
           justify-content: space-between;
 }
 
-header .content .logo {
-  color: white;
-  font-weight: bold;
+header .logo {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #222222;
 }
 
-header .content ul {
-  margin-right: 15px;
-}
-
-header .content ul li {
+header nav ul li {
   display: inline-block;
 }
 
-header .content ul li a {
-  color: white;
+header nav ul li a {
+  color: #222222;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
   text-decoration: none;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin: 0 17px;
+}
+
+header nav ul li a.active {
+  color: #FF5300;
+  border-bottom: 1px solid #FF5300;
+}
+
+header nav ul li a:hover {
+  color: #FF5300;
+  border-bottom: 1px solid #FF5300;
+}
+
+header .button-container button {
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .button-container button svg {
+  margin-right: 5px;
+  width: 15px;
+  fill: #FF5300;
+}
+
+header .button-container button:hover {
+  background-color: #FF5300;
+  color: #fff;
+  cursor: pointer;
+}
+
+header .button-container button:hover svg {
+  fill: #fff;
+}
+
+#intro {
+  background: #f6f7f8;
+}
+
+#intro .intro-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#intro .intro-content .content {
+  margin-top: 140px;
+  padding-right: 150px;
+}
+
+#intro .intro-content .content span {
+  color: #FF5300;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+}
+
+#intro .intro-content .content span:before {
+  content: '';
+  position: absolute;
+  background-color: #FF5300;
+  width: 25px;
+  height: 1px;
+  left: 0;
+  top: 37%;
+}
+
+#intro .intro-content .content h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  color: #222222;
+  margin-bottom: 25px;
+}
+
+#intro .intro-content .content p {
+  color: #555555;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  margin-left: 10px;
+}
+
+#intro .intro-content .img img {
+  width: 550px;
 }
 
 footer {
-  background-color: #686de0;
+  background-color: #FF5300;
   padding: 15px 0;
   text-align: center;
 }
@@ -64,8 +171,12 @@ footer .copyright {
   font-size: 16px;
 }
 
+#main {
+  margin-top: 50px;
+}
+
 #main .about h1 {
-  color: #686de0;
+  color: #FF5300;
   text-align: center;
 }
 
@@ -97,7 +208,7 @@ footer .copyright {
 }
 
 #main .categories .content .item a {
-  color: #686de0;
+  color: #FF5300;
   text-decoration: none;
   display: inline-block;
 }
@@ -131,12 +242,12 @@ footer .copyright {
 
 #main .news .news-items .item .content h2 {
   margin: 10px 0;
-  color: #686de0;
+  color: #FF5300;
 }
 
 #main .news .news-items .item .content a {
   text-decoration: none;
-  background-color: #686de0;
+  background-color: #FF5300;
   padding: 5px 15px;
   display: inline-block;
   color: white;

@@ -1,13 +1,18 @@
 <?php
 
 namespace Pages;
+use Pages\PageInterface;
 
-class Page{
+class Page implements PageInterface{
     public $pageName;
     public $hasHeader = true;
     public $hasFooter = true;
     public $model;
     public $data = null;
+    
+    function __construct() {
+        $this->pageName = isset($_GET['page']) && $_GET['page'] ? $_GET['page'] : 'home' ;
+    }
 
     public function load($path) {
         $this->getHead();
@@ -15,6 +20,7 @@ class Page{
         if($this->hasHeader) {
             $this->getHeader();
         }
+
 
         $data = $this->data;
 
@@ -29,21 +35,22 @@ class Page{
 
     public function getHead()
     {
-        include('views/components/head.php');
+        include('views/frontend/components/head.php');
     }
 
     public function getFoot()
     {
-        include('views/components/foot.php');
+        include('views/frontend/components/foot.php');
     }
 
     public function getHeader()
     {
-        include('views/components/header.php');
+        $pageName = $this->pageName;   
+        include('views/frontend/components/header.php');
     }
 
     public function getFooter()
     {
-        include('views/components/footer.php');
+        include('views/frontend/components/footer.php');
     }
 }

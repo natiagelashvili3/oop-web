@@ -9,13 +9,14 @@ class Home extends Page {
 
     function __construct() {
         $this->model = new HomeModel();
+        Parent::__construct();
     }
 
     public function index() {
 
         $this->data['categories'] = $this->model->getHomeCategories();
         
-        $this->load('views/home/index.php');
+        $this->load('views/frontend/home/index.php');
         
     }
 

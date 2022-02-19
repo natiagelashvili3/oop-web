@@ -1,3 +1,26 @@
+<section id="intro">
+        <div class="container">
+            <div class="row">
+
+                
+
+                <div class="intro-content">
+                    <div class="content">
+                        <span>Trending Episode</span>
+                        <h1>Dreams of an unique ideas scattered through a</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+
+                    <div class="img">
+                        <img src="assets/img/main-img.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+
 <main id="main">
     <section class="about">
         <div class="container">

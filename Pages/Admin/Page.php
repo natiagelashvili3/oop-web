@@ -3,8 +3,9 @@
 namespace Pages\Admin;
 
 use Helpers\Session;
+use Pages\PageInterface;
 
-class Page{
+class Page implements PageInterface{
     public $pageName;
     public $hasHeader = true;
     public $hasFooter = false;
@@ -29,12 +30,6 @@ class Page{
         $data = $this->data;
 
         include($path);
-
-        if($this->hasFooter) {
-            $this->getFooter();
-        }
-
-        $this->getFoot();
     }
 
     public function getHead()
