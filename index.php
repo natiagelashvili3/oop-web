@@ -3,6 +3,8 @@
 include 'Helpers/Session.php';
 include 'Models/Database.php';
 include 'Models/HomeModel.php';
+include 'Models/CategoriesModel.php';
+include 'Models/AboutModel.php';
 include 'Models/UserModel.php';
 
 include 'Pages/PageInterface.php';

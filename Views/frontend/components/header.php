@@ -10,6 +10,9 @@
                         <a href="?page=home" <?= $pageName == 'home' ? 'class="active"' : '' ?>>Home</a>
                     </li>
                     <li>
+                        <a href="?page=about" <?= $pageName == 'about' ? 'class="active"' : '' ?>>About</a>
+                    </li>
+                    <li>
                         <a href="?page=categories" <?= $pageName == 'categories' ? 'class="active"' : '' ?>>Categories</a>
                     </li>
                     <li>

@@ -90,3 +90,85 @@ header{
     }
     
 }
+
+
+
+.form{
+    background: white;
+    margin: 50px 0;
+    padding: 25px;
+    border-radius: 10px;
+
+    h2{
+        color: $primary-color;
+        margin-bottom: 25px;
+    }
+
+    .form-group{
+        margin-bottom: 15px;
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea,
+        select{
+            @extend %input;
+        }
+
+        button{
+            @extend %primary-button;
+        }
+    }
+}
+
+
+.list{
+    margin: 50px 0;
+    .header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        h2{
+            color: $primary-color;
+            
+        }
+
+        a{
+            @extend %primary-button;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+    }
+    
+
+    .items{
+        .item{
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                @extend %primary-button;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+            form{
+                display: inline-block;
+                button{
+                    @extend %primary-button;
+                    text-decoration: none;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}

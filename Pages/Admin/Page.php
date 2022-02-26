@@ -30,6 +30,8 @@ class Page implements PageInterface{
         $data = $this->data;
 
         include($path);
+
+        $this->getFoot();
     }
 
     public function getHead()
