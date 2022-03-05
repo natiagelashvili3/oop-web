@@ -6,6 +6,8 @@ include 'Models/HomeModel.php';
 include 'Models/CategoriesModel.php';
 include 'Models/AboutModel.php';
 include 'Models/UserModel.php';
+include 'Models/MainModel.php';
+include 'Models/NewsModel.php';
 
 include 'Pages/PageInterface.php';
 include 'Pages/Page.php';
