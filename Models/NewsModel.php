@@ -13,7 +13,47 @@ class NewsModel extends Database {
         return $stm->fetchAll();
     }
 
-    public function getFiltered($categoryId, $keyword) {
+    public function getCount() {
+        $stm = $this->connection->query('SELECT COUNT(*) as cnt FROM `news`');
+        $stm->execute();
+
+        return $stm->fetch();
+    }
+
+    public function getByPaging($offset, $limit) {
+        $stm = $this->connection->query('SELECT * 
+                                           FROM news 
+                                       ORDER BY id DESC
+                                       LIMIT '.$limit.' OFFSET '.$offset);
+        $stm->execute();
+
+        return $stm->fetchAll();
+    }
+
+    public function getFilteredCnt($categoryId, $keyword) {
+
+        $whereQuery = '';
+        if($categoryId) {
+            $whereQuery = 'WHERE category_id = '.$categoryId;
+        }
+
+        if($keyword) {
+            if($whereQuery) {
+                $whereQuery .= ' AND (title LIKE "%'.$keyword.'%" OR text LIKE "%'.$keyword.'%") ';
+            } else {
+                $whereQuery = 'WHERE title LIKE "%'.$keyword.'%" OR text LIKE "%'.$keyword.'%" ';
+            }
+        }
+
+        $stm = $this->connection->query('SELECT COUNT(*) as cnt
+                                           FROM news 
+                                          '.$whereQuery);
+        $stm->execute();
+
+        return $stm->fetch();
+    }
+
+    public function getFiltered($categoryId, $keyword, $offset, $limit) {
 
         $whereQuery = '';
         if($categoryId) {
@@ -31,7 +71,8 @@ class NewsModel extends Database {
         $stm = $this->connection->query('SELECT * 
                                            FROM news 
                                           '.$whereQuery.'
-                                       ORDER BY id DESC');
+                                       ORDER BY id DESC
+                                       LIMIT '.$limit.' OFFSET '.$offset);
         $stm->execute();
 
         return $stm->fetchAll();
